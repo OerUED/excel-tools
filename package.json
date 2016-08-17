@@ -9,6 +9,9 @@
   "author": "Maat:maat@ixiaopu.com",
   "license": "ISC",
   "dependencies": {
-    "convert-excel-to-json": "1.0.0"
+    "body-parser": "^1.15.2",
+    "connect-multiparty": "^2.0.0",
+    "convert-excel-to-json": "1.0.0",
+    "express": "^4.14.0"
   }
 }
