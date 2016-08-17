@@ -19,10 +19,9 @@ module.exports = function(req, res, next) {
             rows: 1
           }
         });
-        var arr = data[Object.keys(data)[0]];
-        var result = parsers[fields.type](arr);
-
-        var json = { 'status': 1, list: result };
+        var result = parsers[fields.type](data);
+        var listName = fields.type == 'buyerShow' ? 'list' : 'data'; //此处之前写死了 懒得改了..
+        var json = { 'status': 1, [listName]: result };
         res.setHeader('Content-Description', 'File Transfer');
         res.setHeader('Content-Type', 'application/json; charset=utf-8');
         res.setHeader('Content-Disposition', 'attachment; filename='+ fields.type +'.json');
@@ -31,7 +30,6 @@ module.exports = function(req, res, next) {
         res.send(json);
       } catch (e) {
         res.send('格式不正确,请再试');
-        return;
       } finally {
         // 删除文件
         fs.unlink(files.file.path);
