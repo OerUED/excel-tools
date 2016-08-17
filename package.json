@@ -1,0 +1,14 @@
+{
+  "name": "c2c_excel",
+  "version": "1.0.0",
+  "description": "c2c业务处理excel数据生成json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maat:maat@ixiaopu.com",
+  "license": "ISC",
+  "dependencies": {
+    "convert-excel-to-json": "1.0.0"
+  }
+}
