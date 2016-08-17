@@ -1,7 +1,7 @@
 {
     "apps": [{
         "name": "c2cExcel",
-        "script": "node app",
+        "script": "app",
         "watch": false,
         "ignore_watch" : ["[\\/\\\\]\\./", "node_modules","temp","logs","public"],
         "log_date_format": "YYYY-MM-DD HH:mm Z",
