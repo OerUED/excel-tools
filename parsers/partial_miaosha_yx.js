@@ -11,7 +11,8 @@ module.exports = function(arr) {
       "oldPrice": item.E,
       "imgUrl": item.G,
       "timeLeft": 0,
-      "timeRight": 0
+      "timeRight": 0,
+      "limitNum": item.H
     };
 
     var t = item.A.replace('，', ',').replace(/\s/g, '').split(',');
