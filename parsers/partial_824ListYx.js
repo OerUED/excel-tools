@@ -9,7 +9,8 @@ module.exports = function(arr) {
       "title": item.C,
       "price": item.E,
       "oldPrice": item.D,
-      "imgUrl": item.F
+      "imgUrl": item.F,
+      "groupNum": item.G
     });
   });
   return result;
