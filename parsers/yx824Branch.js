@@ -1,39 +1,24 @@
-var partial_miaosha_yx = require('./partial_miaosha_yx');
-var partial_824ListYx = require('./partial_824ListYx');
-var partial_824ListYxProduct = require('./partial_824ListYxProduct');
+var partial_824ListBao = require('./partial_824ListBao');
+var partial_824ListYxBranchProduct = require('./partial_824ListYxBranchProduct');
 
-function maiDaoIndex(data) {
-  var miaoshaArr = data['秒杀'];
+function yx824Branch(data) {
+  var baoArr = data['爆品'];
 
   var outJSON = {
-    seckill: []
+    baoping: [],
+    shopList: []
   };
 
   // 处理秒杀数据
-  outJSON.seckill = partial_miaosha_yx(miaoshaArr);
+  if (baoArr.length) {
+    outJSON.baoping = partial_824ListBao(baoArr);
+  }
 
-  // 处理列表数据
-  Object.keys(data).filter(item => {
-    return item !== '秒杀' && item.indexOf('列表') > -1;
-  }).forEach(item => {
-    // 只有填了数据才处理 要不然鬼知道列表名
-    if(data[item].length) {
-      var name = data[item][0].A;
-      outJSON[name] = partial_824ListYx(data[item]);
-    }
-  });
-
-  // 处理店铺数据
-  Object.keys(data).filter(item => {
-    return item !== '秒杀' && item.indexOf('店铺') > -1;
-  }).forEach(item => {
-    // 只有填了数据才处理 要不然鬼知道列表名
-    if(data[item].length) {
-      var shopJSON = partial_824ListYxProduct(data[item]);
-      Object.assign(outJSON, shopJSON)
-    }
-  });
+  if (data['店铺'] && data['店铺'].length) {
+    var shopJSON = partial_824ListYxBranchProduct(data['店铺']);
+    Object.assign(outJSON, shopJSON)
+  }
   return outJSON;
 }
 
-module.exports = maiDaoIndex;
+module.exports = yx824Branch;
