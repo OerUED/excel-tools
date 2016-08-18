@@ -9,7 +9,8 @@ module.exports = function(arr) {
       "name": item.D,
       "origin_price": item.E,
       "activity_price": item.F,
-      "id": item.B
+      "id": item.B,
+      "groupNum": parseInt(item.G)
     })
   });
   return result;
