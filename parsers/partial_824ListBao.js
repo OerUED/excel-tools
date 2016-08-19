@@ -19,8 +19,8 @@ module.exports = function(arr) {
       obj.productList.push({
         "id": item.B,
         "title": item.C,
-        "price": item.D,
-        "oldPrice": item.E,
+        "oldPrice": item.D,
+        "price": item.E,
         "imgUrl": item.F
       });
     } else {
@@ -28,8 +28,8 @@ module.exports = function(arr) {
       obj.productList.push({
         "id": item.B,
         "title": item.C,
-        "price": item.D,
-        "oldPrice": item.E,
+        "oldPrice": item.D,
+        "price": item.E,
         "imgUrl": item.F
       });
     }
