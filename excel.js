@@ -29,6 +29,7 @@ module.exports = function(req, res, next) {
         res.setHeader('Cache-Control', 'must-revalidate');
         res.send(json);
       } catch (e) {
+        console.log(e);
         res.send('格式不正确,请再试');
       } finally {
         // 删除文件
