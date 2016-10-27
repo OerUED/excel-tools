@@ -1,10 +1,16 @@
 var index = {
-  buyerShow: require('./buyerShow'),
-  maiDaoIndex: require('./maidaoIndex'),
-  yx824: require('./yx824Index'),
-  yx824Branch: require('./yx824Branch'),
-  lottery: require('./lottery'),
-  yx1111Branch: require('./yx1111Branch')
+  buyerShow: require('./buyerShow'), // 买家秀
+  maiDaoIndex: require('./maidaoIndex'), // 买道主会场
+  yx1111: require('./yx1111'), // 映虚主会场
+  yx1111Branch: require('./yx1111Branch'), // 映虚分会场
+  yx1111Fushi: require('./yx1111Fushi'), // 映虚服饰分会场
+  lottery: require('./lottery') // 抽奖活动
 };
 
 module.exports = index;
+
+/*
+
+珠宝 羊绒 大衣风衣 女装
+家居内衣 鞋子配饰 男装 小确幸
+ */

@@ -1,12 +1,13 @@
 /**
- * 传入excel数据数组  输出前端需要的秒杀数组
+ * 传入excel数据数组  输出前端需要的店铺数组
  */
 module.exports = function(arr) {
+  var json = {};
   var result = [];
   var obj = {};
   var tempNick = ''; // 存储店铺名称
   arr.forEach(item => {
-    if (item.A !== tempNick) {
+    if (item.C !== tempNick) {
       // 创建新对象
       if (Object.keys(obj).length) {
         // 如果之前对象不为空 存入结果集里面
@@ -15,27 +16,30 @@ module.exports = function(arr) {
       obj = {
         productList: []
       };
-      tempNick = obj.type = item.A;
+      tempNick = obj.shopName = item.C;
+      obj.shopId = item.D;
+      obj.shopUrl = item.B;
+      obj.shopDesc = item.E;
       obj.productList.push({
-        "id": item.B,
-        "title": item.C,
-        "oldPrice": item.D,
-        "price": item.E,
-        "imgUrl": item.F
+        "id": item.F,
+        "title": item.G,
+        "price": item.I,
+        "oldPrice": item.H,
+        "imgUrl": item.J
       });
     } else {
       //在原来对象上处理
       obj.productList.push({
-        "id": item.B,
-        "title": item.C,
-        "oldPrice": item.D,
-        "price": item.E,
-        "imgUrl": item.F
+        "id": item.F,
+        "title": item.G,
+        "price": item.I,
+        "oldPrice": item.H,
+        "imgUrl": item.J
       });
     }
   });
   // 最后一项需要做存储
   result.push(obj);
-
-  return result;
+  json.shopList = result;
+  return json;
 }

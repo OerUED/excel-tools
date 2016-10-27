@@ -1,7 +1,6 @@
-var partial_824ListYxBranchProduct = require('./partial_824ListYxBranchProduct');
+var partial_824ListYxBranchProduct = require('./partial_ListYxBranchProduct');
 
 function yx1111Branch(data) {
-  console.log(data);
   var tuanArr = data['团购'];
 
   var outJSON = {
