@@ -3,19 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <title>上传excel</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    p.maidao{
+      font-size: 30px;
+      color:#ff2551;
+    }
+    p.maicheng {
+      font-size: 30px;
+      color:#ffd832;
+    }
+    .form{
+      width: 600px;
+      margin: 50px auto;
+      border: 1px solid #f1f1f1;
+      padding: 10px;
+    }
+    .formControl {
+      display: block;
+      height: 30px;
+      line-height: 30px;
+      margin: 10px 0;
+    }
+  </style>
 </head>
-<body style="margin: 100px;">
-  <form action="/upload" enctype="multipart/form-data" method="post">
-    <select name="type">
+<body>
+  <form action="/upload" enctype="multipart/form-data" method="post" class="form">
+    <p class="maidao">买道</p>
+    <select name="type" class="formControl">
       <option value="lottery">翻牌活动</option>
-      <option value="buyerShow">买家秀</option>
       <option value="maiDaoIndex">买道1111大促</option>
+    </select>
+    <input type="file"  name="file" class="formControl"/>
+    <input type="submit" value="提交" class="formControl">
+  </form>
+
+  <form action="/upload" enctype="multipart/form-data" method="post" class="form">
+    <p class="maicheng">买成</p>
+    <select name="type" class="formControl">
+      <option value="buyerShow">买家秀</option>
       <option value="yx1111">映虚1111主会场</option>
       <option value="yx1111Branch">映虚双十一分会场</option>
       <option value="yx1111Fushi">映虚双十一服饰分会场</option>
     </select>
-    <input type="file"  name="file"/>
-    <input type="submit" value="提交">
+    <input type="file"  name="file" class="formControl"/>
+    <input type="submit" value="提交" class="formControl">
   </form>
 </body>
 </html>
