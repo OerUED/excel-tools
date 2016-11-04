@@ -15,8 +15,8 @@ function yx1111Branch(data) {
         "id": item.B,
         "title": item.C,
         "subTitle": item.D,
-        "oldPrice": item.E,
-        "price": item.F,
+        "oldPrice": item.F,
+        "price": item.E,
         "imgUrl": item.G
       }
     });
