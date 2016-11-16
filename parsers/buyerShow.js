@@ -17,6 +17,8 @@ function buyerShow(data) {
       tempNick = obj.name = item.B;
       obj.text = item.D;
       obj.productId = item.E;
+      obj.imgUrl = item.F;
+      obj.title = item.G;
       obj.imgs.push({
         'imgUrl': item.C,
         'link': ''
