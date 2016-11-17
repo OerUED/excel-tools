@@ -19,6 +19,7 @@ function buyerShow(data) {
       obj.productId = item.E;
       obj.imgUrl = item.F;
       obj.title = item.G;
+      obj.price = item.H;
       obj.imgs.push({
         'imgUrl': item.C,
         'link': ''
