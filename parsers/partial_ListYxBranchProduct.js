@@ -25,7 +25,8 @@ module.exports = function(arr) {
         "title": item.G,
         "price": item.H,
         "oldPrice": item.I,
-        "imgUrl": item.J
+        "imgUrl": item.J,
+        "rebate": item.K
       });
     } else {
       //在原来对象上处理
@@ -34,7 +35,8 @@ module.exports = function(arr) {
         "title": item.G,
         "price": item.H,
         "oldPrice": item.I,
-        "imgUrl": item.J
+        "imgUrl": item.J,
+        "rebate": item.K
       });
     }
   });

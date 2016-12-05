@@ -4,7 +4,8 @@ var index = {
   yx1111: require('./yx1111'), // 映虚主会场
   yx1111Branch: require('./yx1111Branch'), // 映虚分会场
   yx1111Fushi: require('./yx1111Fushi'), // 映虚服饰分会场
-  lottery: require('./lottery') // 抽奖活动
+  lottery: require('./lottery'), // 抽奖活动
+  yx1208: require('./yx1208')
 };
 
 module.exports = index;
