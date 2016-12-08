@@ -27,7 +27,14 @@ module.exports = function(req, res, next) {
         res.setHeader('Content-Disposition', 'attachment; filename='+ fields.type +'.json');
         res.setHeader('Expires', '0');
         res.setHeader('Cache-Control', 'must-revalidate');
-        res.send(json);
+        console.log(listName);
+        if (fields.type === 'taokeCoupon') {
+          res.setHeader('Content-Disposition', 'attachment; filename='+ fields.type +'.js');
+          res.send(result);
+        } else {
+          res.setHeader('Content-Disposition', 'attachment; filename='+ fields.type +'.json');
+          res.send(json);
+        }
       } catch (e) {
         console.log(e);
         res.send('格式不正确,请再试');
