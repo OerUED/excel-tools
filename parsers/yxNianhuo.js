@@ -1,4 +1,4 @@
-var partial_824ListYxBranchProduct = require('./partial_ListYxBranchProduct');
+var partial_824ListYxBranchProduct = require('./partial_ListYxThirdShop');
 var partial_miaosha = require('./partial_miaosha');
 
 function getData(data) {
