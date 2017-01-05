@@ -1,5 +1,6 @@
 function buyerShow(data) {
   var arr = data[Object.keys(data)[0]];
+  console.log(arr);
   var result = [];
   var obj = {};
   var tempNick = '';

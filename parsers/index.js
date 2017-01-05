@@ -6,7 +6,8 @@ var index = {
   yx1111Fushi: require('./yx1111Fushi'), // 映虚服饰分会场
   lottery: require('./lottery'), // 抽奖活动
   yx1208: require('./yx1208'),
-  taokeCoupon: require('./taokeCoupon')
+  taokeCoupon: require('./taokeCoupon'),
+  yxNianhuo: require('./yxNianhuo')
 };
 
 module.exports = index;
