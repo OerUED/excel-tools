@@ -7,7 +7,8 @@ var index = {
   lottery: require('./lottery'), // 抽奖活动
   yx1208: require('./yx1208'),
   taokeCoupon: require('./taokeCoupon'),
-  yxNianhuo: require('./yxNianhuo')
+  yxNianhuo: require('./yxNianhuo'),
+  xcx: require('./xcx')
 };
 
 module.exports = index;
