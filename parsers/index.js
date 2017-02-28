@@ -8,7 +8,8 @@ var index = {
   yx1208: require('./yx1208'),
   taokeCoupon: require('./taokeCoupon'),
   yxNianhuo: require('./yxNianhuo'),
-  xcx: require('./xcx')
+  xcx: require('./xcx'),
+  nvshenjie: require('./nvshenjie') // 女神节
 };
 
 module.exports = index;
