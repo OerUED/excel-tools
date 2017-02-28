@@ -1,3 +1,5 @@
+"use strict";
+
 function index(data) {
     var lottery = data[Object.keys(data)[0]],
         nvshentuan = data[Object.keys(data)[1]],
