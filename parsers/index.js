@@ -9,7 +9,8 @@ var index = {
   taokeCoupon: require('./taokeCoupon'),
   yxNianhuo: require('./yxNianhuo'),
   xcx: require('./xcx'),
-  nvshenjie: require('./nvshenjie') // 女神节
+  nvshenjie: require('./nvshenjie'), // 女神节
+  '0414chun': require('./0414chun') // 女神节
 };
 
 module.exports = index;
