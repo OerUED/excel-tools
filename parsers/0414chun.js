@@ -5,7 +5,8 @@ function index(data) {
     meishi = data[Object.keys(data)[1]],
     nvzhuang = data[Object.keys(data)[2]],
     meizhuang = data[Object.keys(data)[3]],
-    muying = data[Object.keys(data)[4]]
+    muying = data[Object.keys(data)[4]],
+    lottery = data[Object.keys(data)[5]];
 
   var result = {
     pintuan: [], // 拼团
@@ -13,6 +14,7 @@ function index(data) {
     nvzhuang: {}, // 女装
     meizhuang: {}, // 美妆
     muying: {}, // 母婴
+    lottery: []
   }
 
 
@@ -21,6 +23,12 @@ function index(data) {
   result.nvzhuang = parserProduct(nvzhuang);
   result.meizhuang = parserProduct(meizhuang);
   result.muying = parserProduct(muying);
+  result.lottery = lottery.map(item => {
+    return {
+      tel: item.B,
+      nick: item.A
+    }
+  });
 
   return result;
 }
