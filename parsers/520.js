@@ -65,6 +65,7 @@ function parserProduct(source) {
         oldPrice: item.F,
         imgUrl: item.H,
         skuId: item.G,
+        shopId: item.I,
       });
   });
   return res;
