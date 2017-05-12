@@ -23,7 +23,7 @@ function index(data) {
 
 
   result.wajx = parserProduct(wajx);
-  result.jrbt = parserProduct(wajx);
+  result.jrbt = parserProduct(jrbt);
   result.laxxj = parserProduct(laxxj);
   result.wack = parserProduct(wack);
   result.acdzn = parserProduct(acdzn);
