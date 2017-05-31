@@ -22,7 +22,7 @@ function index(data) {
 
 
   result.miaosha = partial_miaosha(miaosha);
-  result.xskq = parserProduct(xskq);
+  result.xskq = parseQiang(xskq);
   result.tuan = parserProduct(tuan);
   result.food = parserProduct(food);
   result.nvzhuang = parserProduct(nvzhuang);
@@ -106,33 +106,44 @@ function parserShop(source) {
     return result;
 }
 
-function parseQiang(source) {
-  let res = {
-    main: [],
-    tuangou: [],
-    pintuan: [],
-  }
-  let key = '';
-  let data = source.map(item => {
-      if (item.C == '0') {
-        key = 'main';
-      } else if (item.C == '1') {
-        key = 'pintuan';
-      } else {
-        key = 'tuangou';
-      }
 
-      res[key].push({
-        id: item.A,
-        title: item.B,
-        groupNum: item.D,
-        price: item.E,
-        oldPrice: item.F,
-        imgUrl: item.H,
-        skuId: item.G,
-        shopId: item.I,
+// 限时快抢
+function parseQiang(source) {
+  let res = [];
+  var obj = {};
+  var tempTime = '';
+  source.map(item => {
+    if (item.A !== tempTime) {
+      // 创建新对象
+      if (Object.keys(obj).length) {
+        res.push(obj);
+      }
+      obj = {
+        goods: []
+      };
+      tempTime = obj.start_time = item.A;
+      obj.goods.push({
+        id: item.B,
+        title: item.C,
+        price: item.D,
+        oldPrice: item.E,
+        skuId: item.F,
+        imgUrl: item.G,
+        shopId: item.H,
       });
+    } else {
+      obj.goods.push({
+        id: item.B,
+        title: item.C,
+        price: item.D,
+        oldPrice: item.E,
+        skuId: item.F,
+        imgUrl: item.G,
+        shopId: item.H,
+      });
+    }
   });
+  res.push(obj);
   return res;
 }
 
