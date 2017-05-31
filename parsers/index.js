@@ -10,7 +10,8 @@ var index = {
   yxNianhuo: require('./yxNianhuo'),
   xcx: require('./xcx'),
   nvshenjie: require('./nvshenjie'), // 女神节
-  '520': require('./520') // 女神节
+  '520': require('./520'), // 女神节
+  '2ndAnnv': require('./2ndAnnv'), // 周年庆
 };
 
 module.exports = index;
