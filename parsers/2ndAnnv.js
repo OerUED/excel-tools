@@ -17,7 +17,7 @@ function index(data) {
     food: {},  // 美食汇
     nvzhuang: {}, // 爱逛街
     muying: {}, //省钱妈咪
-    shop: {} // 店铺
+    shops: {} // 店铺
   }
 
 
@@ -27,7 +27,7 @@ function index(data) {
   result.food = parserProduct(food);
   result.nvzhuang = parserProduct(nvzhuang);
   result.muying = parserProduct(muying);
-  result.shop = parserShop(shop);
+  result.shops = parserShop(shops);
 
   return result;
 }
