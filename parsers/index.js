@@ -12,6 +12,7 @@ var index = {
   nvshenjie: require('./nvshenjie'), // 女神节
   '520': require('./520'), // 女神节
   '2ndAnnv': require('./2ndAnnv'), // 周年庆
+  'tb11': require('./tb11')
 };
 
 module.exports = index;
