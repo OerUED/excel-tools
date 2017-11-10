@@ -19,6 +19,7 @@ module.exports = function(req, res, next) {
             rows: 1
           }
         });
+        
         var result = parsers[fields.type](data);
         var listName = fields.type == 'buyerShow' ? 'list' : 'data'; //此处之前写死了 懒得改了..
         var json = { 'status': 1, [listName]: result };

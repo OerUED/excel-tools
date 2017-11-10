@@ -12,7 +12,8 @@ var index = {
   nvshenjie: require('./nvshenjie'), // 女神节
   '520': require('./520'), // 女神节
   '2ndAnnv': require('./2ndAnnv'), // 周年庆
-  'tb11': require('./tb11')
+  'tb11': require('./tb11'),
+  'TK_POINTS_PRO': require('./TK_POINTS_PRO') // 积分商城商品聚合页
 };
 
 module.exports = index;
