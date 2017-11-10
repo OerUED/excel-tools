@@ -28,8 +28,8 @@ module.exports = function(req, res, next) {
         res.setHeader('Content-Disposition', 'attachment; filename='+ fields.type +'.json');
         res.setHeader('Expires', '0');
         res.setHeader('Cache-Control', 'must-revalidate');
-        console.log(listName);
-        if (fields.type === 'taokeCoupon') {
+        console.log(fields.type);
+        if (fields.type === 'tb11') {
           res.setHeader('Content-Disposition', 'attachment; filename='+ fields.type +'.js');
           res.send(result);
         } else {

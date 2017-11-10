@@ -19,7 +19,7 @@ function xcx(data) {
     });
     result.datas[key] = ret;
   });
-  return result
+  return 'var tbDatas = '+ JSON.stringify(result) +';';
 }
 
 module.exports = xcx;
