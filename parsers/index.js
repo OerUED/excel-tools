@@ -13,7 +13,8 @@ var index = {
   '520': require('./520'), // 女神节
   '2ndAnnv': require('./2ndAnnv'), // 周年庆
   'tb11': require('./tb11'),
-  'TK_POINTS_PRO': require('./TK_POINTS_PRO') // 积分商城商品聚合页
+  'TK_POINTS_PRO': require('./TK_POINTS_PRO'), // 积分商城商品聚合页
+  'tb11_2018': require('./tb11_2018') // 积分商城商品聚合页
 };
 
 module.exports = index;
